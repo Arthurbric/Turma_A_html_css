@@ -1,0 +1,61 @@
+/* esse é um comentário */
+/*
+.primary-header{
+	background-color: blue ; 
+}
+*/
+
+body{
+	background-color: #FAF8DA;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.primary-header{
+	text-align: center;
+}
+
+.main-heading{
+	color: #205D76;
+	font-size: 70px;
+}
+
+.town-preview{
+	width: 650px;
+}
+.store-section {
+	display: flex;
+
+}
+
+.building{
+	width: 200px;
+}
+.store-details { 
+    margin-left: 30px;
+}
+
+.category-heading{
+	color: #205D76;
+	font-size: 30px;
+}
+
+.store-list{
+	color: #FFC122; /* Muda a cor dos marcadores da lista */
+	padding: 0px;	/* nao fica muito bom */
+}
+
+.store-link{
+	color: #EA6E2F;
+	font-size: 20px;
+
+}/*
+footer{
+	background-color: #FFC122;
+}*/
+.primary-footer{
+	background-color: #FFC122;
+	font-size: 20px;
+}
+.created-by{
+	color: #FFFFFF;
+}
