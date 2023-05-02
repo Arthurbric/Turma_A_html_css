@@ -3,9 +3,14 @@ p{
     background-color: pink;
 }
 
-p.pLight{
+p .pLight{
     color : red;
     background-color: pink;
+    font-size: 40px;
+}
+p.pLight{
+    color : rgb(22, 247, 209);
+    background-color: rgb(0, 132, 48);
 }
 
 .pDark{
