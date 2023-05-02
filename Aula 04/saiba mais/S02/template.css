@@ -1,0 +1,25 @@
+p{
+    color : blue;
+    background-color: pink;
+}
+
+p.pLight{
+    color : red;
+    background-color: pink;
+}
+
+.pDark{
+    color : white;
+    background-color: Gray;
+}
+
+#p2
+{
+    color : orange;
+}
+
+div
+{
+    color : gold;
+    background-color: black;
+}
