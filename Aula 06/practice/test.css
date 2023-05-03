@@ -1,0 +1,9 @@
+.practice{
+	filter: filter(value);
+
+	-webkit-filter: filter(value);
+
+	-moz-filter: filter(value);
+	
+	-o-filter: filter(value);
+}

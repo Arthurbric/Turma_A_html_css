@@ -1,0 +1,11 @@
+
+filter: blur();
+filter: brightness();
+filter: contrast();
+filter: drop-shadow();
+filter: grayscale();
+filter: hue-rotate();
+filter: invert();
+filter: opacity();
+filter: saturate();
+filter: sepia();
