@@ -1,0 +1,29 @@
+.practice{
+	filter: blur(100%);
+
+	-webkit-filter: blur(10px);
+
+	-moz-filter: grayscale(100%);
+	
+	-o-filter: grayscale(100%);
+	
+}
+/*
+opacity: 0.5;
+filter: blur(px);
+filter: brightness();
+filter: contrast();
+filter: drop-shadow();
+1. `filter: drop-shadow(5px 5px 2px #888);`H V blur
+2. `filter: drop-shadow(-2px -2px 1px rgba(0, 0, 0, 0.5));
+3. `filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+4. `filter: drop-shadow(0 4px 4px #888);`
+5. `filter: drop-shadow(2px 2px 2px #888, -2px -2px 2px #888);`
+
+filter: grayscale();
+filter: hue-rotate();
+filter: invert();
+filter: opacity();
+filter: saturate();
+filter: sepia();
+*/
