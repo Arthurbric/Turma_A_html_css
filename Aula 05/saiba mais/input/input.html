@@ -1,0 +1,45 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<form action="server.php" method="get">
+			<fieldset>
+				<legend>Personal Information</legend>
+				First Name <input type="text" id="txtFirstName" name="txtFirstName" autocomplete="on" />
+				<input type="button" value="Click Me" /><br />
+				<input type="checkbox" value="" />Remember Me<br />
+				<input type="radio" name="rdbGender" value="M" />Male
+				<input type="radio" name="rdbGender" value="F" />Female <br />
+				Password <input type="password" id="pwdPass" /> <br />
+				<input type="reset" value="Reset" />
+				<input type="submit" value="Send" /><br />
+				
+				<textarea cols="30" rows="10"></textarea> <br />
+				<select>
+					<option value="1">Tehran</option>
+					<option value="2">Isfahan</option>
+					<option value="3">Shiraz</option>
+				</select>
+				<br />
+				<input type="text" id="txtBrowsers" list="browsers" />
+				<datalist id="browsers">
+					<option value="chrome" />
+					<option value="Mozilla" />
+					<option value="Opera" />
+				</datalist> 
+				<br />
+				<input type="number" min="1" max="10" />
+				<input type="color"  />
+				<input type="date"  />
+				<input type="range" />
+				<input type="file" >
+				<input type="email">
+				<input type="tel" value=""> <br>
+				<input type="url" value=""> <br>
+				<input type="image" value=""> <br>
+				<font size="50" color="red" face="Courier New">Arthur</font>
+			</fieldset>
+			
+		</form>
+	</body>
+</html>
