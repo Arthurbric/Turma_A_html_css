@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var students = new Array()
+			var cnt = 0;
+			function addStudent()
+			{
+				var fname = prompt("Enter Your First Name : ")
+				var lname = prompt("Enter Your Last Name : ")
+				var age = prompt("Enter Your Age : ")
+				
+				var std = {fname : fname , lname : lname , age : age}
+				students[cnt++] = std
+			}
+			
+			function showStudents()
+			{
+				var table = "<table align='center' border='1' width='300'><tr><th>First Name</th><th>Last Name</th><th>Age</th></tr> ";
+				for(var i=0; i<students.length ; ++i)
+				{
+					table += "<tr>"
+					table += "<td>"+students[i].fname+"</td>"
+					table += "<td>"+students[i].lname+"</td>"
+					table += "<td>"+students[i].age+"</td>"
+					table += "</tr>"
+				}
+				table += "</table>"
+				
+				document.getElementById('students').innerHTML = table
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Add Student" onclick="addStudent()" />
+		<input type="button" value="Show Students" onclick="showStudents()" />
+		<div id="students">
+		</div>
+	</body>
+</html>

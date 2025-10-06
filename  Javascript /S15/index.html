@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			//window.document.getElementById()
+			//alert(window.innerWidth)
+			//document.documentElement.clientWidth
+			//document.body.clientWidth
+			
+		//	var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+		 var win
+		function btnOpen_click()
+		{
+			win = window.open("" , "" , "_blank")
+		}
+		
+		function btnClose_click()
+		{
+			win.close()
+		}
+		
+		function btnMove_click()
+		{
+			win.moveTo(600,700)
+			win.focus()
+		}
+		
+		function btnResize_click()
+		{
+			win.resizeTo(800 , 100)
+			win.focus()
+		}
+		
+		//alert(screen.availHeight)
+		//alert(window.history.forward())
+		//alert(window.navigator.appName)
+		//setInterval(function(){alert()} , 3000)
+		var t = setInterval(function(){timer()} , 1000)
+		function timer()
+		{
+			var d = new Date()
+			document.getElementById('timer').innerHTML = d.toLocaleTimeString()
+		}
+		
+		var timerState = true
+		function toggleTimer(btn)
+		{
+			
+			if(timerState)
+			{
+				clearInterval(t)
+				btn.value = "Play"
+				timerState = false
+			}
+			else
+			{
+				t = setInterval(function(){timer()} , 1000)
+				btn.value = "Pause"
+				timerState = true
+			}
+			
+		}
+		
+		var op = setTimeout(function(){alert()} , 3000)
+		clearTimeout(op)
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Open Window" onclick="btnOpen_click()" />
+		<input type="button" value="Close Window" onclick="btnClose_click()" />
+		<input type="button" value="Move Window" onclick="btnMove_click()" />
+		<input type="button" value="Resize Window" onclick="btnResize_click()" />
+		<br />
+		<span style="background-color:yellow; color:blue" id="timer"></span>
+		<input type="button" value="Pause" onclick="toggleTimer(this)" />
+	</body>
+</html>

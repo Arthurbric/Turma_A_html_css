@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<style>
+		div#slides img
+		{
+			width : 400px;
+			height : 300px;
+			display : none;
+			
+		}
+		
+		div#slides img:first-child
+		{
+			display : inline;
+		}
+		</style>
+		<script type="text/javascript">
+		var index = 0;
+		var fade = setInterval(function(){fading()} , 100)
+		setInterval(function(){slider()} , 4000)
+		
+		function slider()
+		{
+			var slides = document.getElementById('slides').getElementsByTagName('img')
+			++index;
+			if(index==slides.length)
+				index = 0;
+				
+			if(index==0)
+				slides[slides.length-1].style.display = "none"
+			else
+				slides[index-1].style.display = "none"
+				
+			slides[index].style.display = "inline"
+			slides[index].style.opacity = 1;
+			clearInterval(fade)
+			fade = setInterval(function(){fading()} , 100)
+			
+		}
+		
+		function fading()
+		{
+			var slides = document.getElementById('slides').getElementsByTagName('img')
+			var opacity = slides[index].style.opacity >=0 ? slides[index].style.opacity : 1;
+			slides[index].style.opacity = opacity-0.025
+			
+		}
+		</script>
+	</head>
+	<body>
+		<div id="slides">
+			<img src="Desert.jpg" />
+			<img src="Jellyfish.jpg" />
+			<img src="Koala.jpg" />
+			<img src="Tulips.jpg" />
+			<img src="Penguins.jpg" />
+			<img src="Hydrangeas.jpg" />
+		</div>
+		
+	</body>
+</html>

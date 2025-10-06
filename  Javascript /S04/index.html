@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		function getNumbers()
+		{
+			var n1 = parseInt(prompt("First Number : "))
+			var n2 = eval(prompt("Second Number : "))
+			var op = prompt("Operator : ")
+			var result = calc(n1 , n2 , op)
+			alert(result)
+		}
+		
+		function calc(num1 , num2 , operator)
+		{
+			switch(operator)
+			{
+				case "+" : return(num1+num2)
+				case "-" : return(num1-num2)
+				case "*" : return(num1*num2)
+				case "/" : return(num1/num2)
+			}
+		}
+		
+		getNumbers();
+		getNumbers()
+		</script>
+	</head>
+	<body onload="getNumbers();getNumbers()">
+	</body>
+</html>

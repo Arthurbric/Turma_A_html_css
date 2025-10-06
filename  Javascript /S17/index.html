@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		function factorial()
+		{
+			var n = document.getElementById('txtNum1').value 
+			var f = 1
+			//for(var i=n;i>1;--i)
+			//	f *= i; // f = f*i
+			
+		//	for(var i=2;i<=n ; ++i)
+		//		f *= i
+				
+			//alert(f)
+			alert(recFactorial(n))
+		}
+		/*
+		n! = 1 n=0,1
+		n! = n(n-1)! n>1
+		*/
+		
+		function recFactorial(k)
+		{
+			if(k==0 || k==1)
+				return 1;
+			else
+				return k*recFactorial(k-1)
+		}
+		/*
+		12%8 => 4
+		8%4 =>0
+		
+		8%12 => 8
+		12%8 => ...
+		*/
+		function gcd()
+		{
+			var n = document.getElementById('txtNum2').value
+			var m = document.getElementById('txtNum3').value
+			/*var r;
+			do
+			{
+				r = n%m;
+				n = m;
+				m = r
+			}while(r!=0)
+			
+			alert(n)
+		*/
+			alert(recGCD(n,m))
+		}
+		
+		function recGCD(n , m)
+		{
+			if(n%m==0)
+				return m;
+			return recGCD(m , n%m)
+		}
+		
+		//1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 , 34 , 55 , ...
+		function fibonacci()
+		{
+			var n = document.getElementById('txtNum4').value
+			var fibs = new Array()
+			fibs[1] = 1;
+			fibs[2] = 1;
+			for(var i = 3; i<=n ; ++i)
+				fibs[i] = fibs[i-1]+fibs[i-2]
+				
+			alert(fibs[n])
+			//alert(recFib(n))
+		}
+		
+		function recFib(n)
+		{
+			if(n==1 || n==2)
+				return 1;
+			else
+				return recFib(n-1)+recFib(n-2)
+		}
+		
+		/*
+		100 => 99 , 98
+		99 => 98 , 97
+		98 = > 97 , 96
+		98 => 97 , 96
+		
+		*/
+		
+		
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txtNum1" />
+		<input type="button" value="Fact" onclick="factorial()" />
+		
+		<hr />
+		
+		<input type="text" id="txtNum2" />
+		<input type="text" id="txtNum3" />
+		<input type="button" value="GCD" onclick="gcd()" />
+		
+		<hr />
+		<input type="text" id="txtNum4" />
+		<input type="button" value="Fib" onclick="fibonacci()" />
+		
+		
+	</body>
+</html>

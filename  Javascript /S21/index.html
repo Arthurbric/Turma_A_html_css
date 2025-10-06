@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<style>
+		.small
+		{
+			width : 200px;
+			height : 200px;
+			margin-left : 20px;
+		}
+		</style>
+		<script type="text/javascript">
+		function showOriginalPhoto(e)
+		{
+			if(document.getElementById('original'))
+				removeOriginalPhoto()
+			var img = e.srcElement
+			var origImg = document.createElement('img')
+			origImg.src = img.src
+			origImg.style.width = "600px"
+			origImg.style.height = "400px"
+			origImg.style.zIndex = "999"
+			origImg.style.position = "absolute"
+			origImg.style.left = e.clientX
+			origImg.style.top = e.clientY
+			origImg.id = "original"
+			document.body.appendChild(origImg);
+			
+		}
+		
+		function removeOriginalPhoto()
+		{
+			document.body.removeChild(document.getElementById('original'))
+		}
+		</script>
+	</head>
+	<body>
+		<img src="Desert.jpg" class="small" onmousemove="showOriginalPhoto(event)" onmouseout="removeOriginalPhoto()" />
+		<img src="Koala.jpg" class="small" onmousemove="showOriginalPhoto(event)" onmouseout="removeOriginalPhoto()" />
+		<img src="Tulips.jpg" class="small" onmousemove="showOriginalPhoto(event)" onmouseout="removeOriginalPhoto()" />
+	</body>
+</html>

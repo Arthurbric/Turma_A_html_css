@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<style>
+		div
+		{
+			width : 200px;
+			height : 200px;
+			background-color : yellow;
+		}
+		</style>
+		<script type="text/javascript">
+		function change()
+		{
+			//document.getElementById('d1').innerHTML = "salaam"
+			var para = document.getElementById('d1').getElementsByTagName('p')
+			for(var i=0;i<para.length;++i)
+			{
+				para[i].style.color = "red"
+				para[i].style.borderWidth = "10px"
+				para[i].style.borderStyle = "solid"
+				para[i].style.borderColor = "10px"
+			}
+			
+			document.getElementById('img1').src = "nodes relations.png"
+		}
+		
+		function childs()
+		{
+			//document.getElementById('d1').childNodes[1].innerHTML = "<a href='http://www.abdollahi.us'>My Web Site</a><br />hgfhg"
+			//document.getElementById('d1').childNodes[1].style.color = "red"
+			//alert(document.getElementById('d1').parentNode.parentNode.firstChild)
+			alert(document.getElementById('d1').firstChild.nextSibling.nodeType)
+		}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Click Me" onclick="change()" />
+		<input type="button" value="Childs" onclick="childs()" />
+		<!--<img src="dom.png" id="img1" />-->
+		<div id="d1">jklj
+			<p>p1</p>
+			<p>p2</p>
+			<p>p3</p>
+		</div>
+	</body>
+</html>

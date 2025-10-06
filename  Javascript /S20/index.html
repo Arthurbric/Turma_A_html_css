@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		function changePersonsState(chk)
+		{
+			if(chk.checked)
+				document.getElementById('sltPersons').disabled = true
+			else
+				document.getElementById('sltPersons').disabled = false
+		}
+		
+		function getPersonsLength()
+		{
+		
+			//alert(document.getElementById('sltPersons').getElementsByTagName('option').length)
+			alert(document.getElementById('sltPersons').length)
+		}
+		
+		function changeLength()
+		{
+			document.getElementById('sltPersons').size = 6
+		}
+		
+		function personsChnageItem()
+		{
+			//alert(document.getElementById('sltPersons').selectedIndex)
+		}
+		
+		function changeOption()
+		{
+			var slt = document.getElementById('sltPersons')
+			var name = prompt("Enter Your Name : ")
+			if(confirm("Are you sure ?"))
+				slt.options[slt.selectedIndex].text = name
+		}
+		
+		function removeOption()
+		{
+			var slt = document.getElementById('sltPersons')
+			if(confirm("Are you sure?"))
+				slt.remove(slt.selectedIndex)
+		}
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" onclick="changePersonsState(this)" />Disable Persons
+		<input type="button" value="Persons Length" onclick="getPersonsLength()" />
+		<input type="button" value="Change Length" onclick="changeLength()" />
+		<input type="button" value="Change Option" onclick="changeOption()" />
+		<input type="button" value="Remove Option" onclick="removeOption()" />
+		<select id="sltPersons" multiple onchange="personsChnageItem()" >
+			<option value="1">Reza</option>
+			<option value="2">Ali</option>
+			<option value="3">Ahmad</option>
+			<option value="4">Mohammad</option>
+		</select>
+	</body>
+</html>
